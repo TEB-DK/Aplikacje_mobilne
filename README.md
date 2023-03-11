@@ -1,4 +1,8 @@
+<div align="center">
+
 # 🚀 Wprowadzenie do języka JavaScript 🚀
+
+</div>
 
 JavaScript to ``dynamicznie typowany`` język wysokiego poziomu. Najczęściej jest używany przy tworzeniu stron ``WWW``, zapewniając interaktywność stron oraz obsługę zdarzeń, walidacji formularzy czy budowanie elementów nawigacyjnych.
 
