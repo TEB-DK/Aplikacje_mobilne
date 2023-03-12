@@ -328,6 +328,8 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   ### Właściwości tablic
   Tablice są obiektami, które mają określone swoje metody. Dzięki nim możliwa jest manipulacja danymi wewnątrz, czy chociażby odczytywanie informacji o tablicach.
 
+<div align="center">
+
   | Właściwość | Opis |
   |:---:|:---:|
   |length | Zwraca długość tablicy |
@@ -340,7 +342,7 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   |push() | "wpycha" element do tablicy na sam koniec |
   |pop() | "wypycha" czyli usuwa ostatni element tablicy |
 
-
+</div>
 
   #### Sortowanie tablic
   Metoda sort() przyjmuje jako parametr funkcję porównującą.
