@@ -455,9 +455,11 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
 
   ### 🌟 Zadania do wykonania
 
-  1. Napisz funkcję która posortuje elementy tablicy (od największego do najmniejszego) i wszelkie występujące w niej wartości 0 zastąpi liczbą 1.
+  1. Wypisz liczby od 1 do 100, przy czym liczby podzielne przez ``3`` zastąp słowem ``Fizz``, liczby podzielne przez ``5``, zastąp słowem ``Buzz``, natomiast liczby podzielne i przez ``3 i przez 5`` zastąp słowem ``FizzBuzz``. A w rezultacie, powinniśmy otrzymać – 1, 2, Fizz, 4, Buzz, 6, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz, 16 itd.
 
-  2. Napisz funkcję która usuwa następujące wyrażenia z tablicy: "null", "0", "false", "true", "undefined" oraz "NaN".
+  1. Napisz funkcję która posortuje elementy tablicy (od największego do najmniejszego) i wszelkie występujące w niej wartości ``0`` zastąpi liczbą ``1``.
+
+  2. Napisz funkcję która usuwa następujące wyrażenia z tablicy: ``null``, ``0``, ``false``, ``true``, ``undefined`` oraz ``NaN``.
      - Jako argument musi przyjąć tablicę do "oczyszczenia"
      - Dla ułatwienia wykorzystaj przedstawioną tablicę
 
@@ -465,8 +467,8 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
         const przykladowa_tablica = [NaN, 0, true, 1, false, -21, '',undefined, 37, null]
         ```
 
-  3. Napisz funkcję rozszerzającą podaną tablicę przez dopełnienie jej liczbą 0.
-     - Przykładowo jeśli tablica ma 3 elementy, to zadaniem funkcji będzie rozszerzenie tablicy do n-elementów, które zostaną określone w parametrze.
+  3. Napisz funkcję rozszerzającą podaną tablicę przez dopełnienie jej liczbą ``0``.
+     - Przykładowo jeśli tablica ma ``3 elementy``, to zadaniem funkcji będzie rozszerzenie tablicy do ``n-elementów``, które zostaną określone w parametrze.
   
   4. Napisz funkcję, która zlicza powtórzenia liczb występujące w podanej tablicy i wyświetla je.
      - Zmodyfikuj zadanie w następujący sposób:
