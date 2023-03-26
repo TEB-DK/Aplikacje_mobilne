@@ -330,17 +330,23 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
 
 <div align="center">
 
-  | Właściwość | Opis |
+  | Właściwość / Metoda | Opis |
   |:---:|:---:|
-  |length | Zwraca długość tablicy |
-  |concat(tab1, tab2) | Zwraca nową tablicę po przez dodanie dwóch tablic do siebie |
-  |includes() | Metoda służąca do wyszukiwania konkretnego słowa w ciągu znaków|
-  |join() | Podobne działania jak toString, jednak można zdefiniować separator |
-  |slice() | Dzieli tablicę na poszczególne elementy |
-  |sort() | Sortuje tablicę według przekazanej w parametrze funkcji |
-  |reverse() | Odwraca kolejność elementów w tablicy|
-  |push() | "wpycha" element do tablicy na sam koniec |
-  |pop() | "wypycha" czyli usuwa ostatni element tablicy |
+  | length | Zwraca długość tablicy |
+  | concat(tab1, tab2) | Zwraca nową tablicę po przez dodanie dwóch tablic do siebie |
+  | includes() | Metoda służąca do wyszukiwania konkretnego słowa w ciągu znaków|
+  | join() | Podobne działania jak toString, jednak można zdefiniować separator |
+  | slice() | Dzieli tablicę na poszczególne elementy |
+  | sort() | Sortuje tablicę według przekazanej w parametrze funkcji |
+  | reverse() | Odwraca kolejność elementów w tablicy|
+  | push() | "wpycha" element do tablicy na sam koniec |
+  | pop() | "wypycha" czyli usuwa ostatni element tablicy |
+  | reduce() | Wykonuje funkcję zwrotną na każdym elemencie tablicy, zwracając jedną wartość wynikową |
+  | filter() | Tworzy nową tablicę z wszystkimi elementami, które spełniają warunek podany w funkcji zwrotnej|
+  | findIndex() | Zwraca indeks pierwszego elementu w tablicy, który spełnia warunek podany w funkcji zwrotnej. |
+  | find() | Zwraca wartość pierwszego elementu w tablicy, który spełnia warunek podany w funkcji zwrotnej.|
+  | some() | Zwraca wartość logiczną ``true``, jeśli co najmniej jeden element w tablicy przechodzi test określony w funkcji zwrotnej.|
+  | every() | Zwraca wartość logiczną true, jeśli każdy element w tablicy przechodzi test określony w funkcji zwrotnej.|
 
 </div>
 
