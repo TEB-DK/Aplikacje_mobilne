@@ -397,8 +397,8 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
       }
   }
 
-  printAbout("Paweł", "orangutan", "hipopotam");
-  printAbout();
+  wlasciciel_zwierze("Paweł", "orangutan", "hipopotam");
+  wlasciciel_zwierze();
   ```
 
   ### Pętle na tablicach
@@ -473,11 +473,49 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
      - Przykładowo jeśli tablica ma ``3 elementy``, to zadaniem funkcji będzie rozszerzenie tablicy do ``n-elementów``, które zostaną określone w parametrze.
   
   4. Napisz funkcję, która zlicza powtórzenia liczb występujące w podanej tablicy i wyświetla je.
-     - Zmodyfikuj zadanie w następujący sposób:
-       - Dodaj funkcjonalność do funkcji w postaci oczyszczenia tablicy z powtarzających się wartości zaraz po wyświetleniu ich i zwróć oczyszczoną tablicę.
+
+      <details> 
+      <summary>🌠 Wskazówka</summary>
+      <p>
+
+      > Aby zliczyć powtórzenia liczb w tablicy i wyświetlić ich ilość, można użyć jednej z pętli do iteracji po tablicy, a następnie przechowywać informacje o liczbie wystąpień każdej liczby w obiekcie lub tablicy. Podczas iteracji po tablicy, dla każdej liczby można sprawdzić, czy już wystąpiła wcześniej i w zależności od tego, zwiększyć jej liczbę wystąpień lub dodać ją jako nowy klucz/wartość do obiektu/tablicy. Na końcu wystarczy wyświetlić informacje o liczbie wystąpień każdej liczby.
+      
+      </p>
+      </details>
 
   5. Napisz funkcję, która przyjmie 4 różne (liczbowe) tablicę i zwróci tablicę, której suma wszystkich elementów jest największa.
-  
+
+      <details>
+      <summary>🌠 Wskazówka</summary>  
+      <p>
+      
+      > Można zastosować prostą pętlę for w celu przejścia przez elementy wszystkich tablic, sumowania ich wartości i porównywania tych sum, aby znaleźć tablicę o największej sumie.
+
+      - Stwórz zmienną przechowującą sumę wartości, które zostaną obliczone dla każdej z czterech tablic.
+      - Przejdź przez każdą z czterech tablic w jednej pętli for.
+      - Zsumuj wartości w każdej iteracji i porównaj z sumą dotychczasowej tablicy.
+      - Przypisz indeks tablicy z największą sumą do zmiennej i zwróć tablicę o tym indeksie.
+
+      </p>
+      </details>
+
+      <details>
+      <summary>Przykładowy wynik zadania</summary>
+      <p>
+      
+      ```javascript
+      var arr1 = [1, 2, 3, 4, 5];
+      var arr2 = [6, 7, 8, 9, 10];
+      var arr3 = [11, 12, 13, 14, 15];
+      var arr4 = [16, 17, 18, 19, 20];
+
+      var result = findMaxSumArray(arr1, arr2, arr3, arr4);
+
+      console.log(result); // [16, 17, 18, 19, 20]
+      ```
+
+      </p>
+      </details>
 ## 🤖 Obiekty
 
   ### Co to jest obiekt?
@@ -749,8 +787,344 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   
   1. Napisz metodę, która wypisze wszystkie informacje o obiekcie.
 
-  2. Utwórz nowy konstruktor i stwórz 3 obiekty według niego, następnie wstaw obiekty do tablicy i posortuj je, wyświetl wynik sortowania.
+  2. Utwórz nowy konstruktor ``Persons`` i stwórz 3 obiekty według niego (niech posiadają imie oraz wiek), następnie wstaw obiekty do tablicy i posortuj je, wyświetl wynik sortowania (metoda sort()).
 
   3. Stwórz konstruktor ``Sorter`` w którym utworzysz metodę ``sortowania bąbelkowego``, utwórz obiekt na jego podstawie i zastosuj zaimplementowaną metode.
 
+      <details>
+      <summary>🌠 Wskazówka</summary>
+      <p>
+
+      > Należy napisać konstruktor JavaScript o nazwie "Sorter", który będzie zawierał metodę sortowania bąbelkowego. Metoda sortowania bąbelkowego jest jednym z najprostszych algorytmów sortowania, który polega na porównywaniu sąsiednich elementów w tablicy i zamienianiu ich kolejności, jeśli są w niewłaściwej kolejności. Następnie powtarza się ten proces dla kolejnych par elementów aż do uzyskania posortowanej tablicy. Po napisaniu konstruktora, należy utworzyć obiekt na jego podstawie i wywołać metodę sortowania bąbelkowego dla wybranej tablicy. Wynik sortowania należy wyświetlić w konsoli lub na stronie HTML.
+
+      </p>
+      </details>
+      <details>
+      <summary>Przykładowy wynik zadania</summary>
+      <p>
+
+      ```javascript
+      let sorter = new Sorter([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]);
+      console.log("Przed sortowaniem: " + sorter.array);
+      // Przed sortowaniem: [3,1,4,1,5,9,2,6,5,3,5]
+      sorter.bubbleSort();
+      console.log("Po sortowaniu: " + sorter.array);
+      // Po sortowaniu: [1,1,2,3,3,4,5,5,5,6,9]
+      ```
+      
+      </p>
+      </details>
+
+
 ## 🐋 Manipulacja DOM
+Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia interaktywnych stron internetowych. Poniżej zostały przedstawione podstawowe informacje na temat manipulacji elementami DOM.
+
+### 📥 Pobieranie elementów DOM
+  Do pobierania elementów DOM można użyć różnych metod. Najczęściej używaną metodą jest metoda ``getElementById()``, która pobiera element na podstawie jego identyfikatora. Innymi popularnymi metodami są ``getElementsByClassName()`` oraz ``getElementsByTagName()``, a także ``querySelector()``.
+
+  #### getElementById()
+
+  Metoda ``getElementById()`` jest najczęściej używaną metodą do pobierania elementów DOM w JavaScript. Metoda ta zwraca element na podstawie jego identyfikatora, który jest unikalny dla każdego elementu na stronie. 
+  
+  > Przykładowe zastosowanie metody ``getElementById()`` to:
+
+  ```javascript
+  const element = document.getElementById("myElement");
+  element.style.color = "red";
+  ```
+
+  #### getElementsByClassName()
+
+  Metoda ``getElementsByClassName()`` zwraca tablicę elementów, które posiadają daną klasę. Metoda ta może zwrócić wiele elementów, które mają tę samą klasę. 
+  
+  > Przykładowe zastosowanie metody ``getElementsByClassName()`` to:
+
+  ```javascript
+  const elements = document.getElementsByClassName("myClass");
+  for(let i = 0; i < elements.length; i++){
+    elements[i].style.backgroundColor = "blue";
+  }
+  ```
+    
+  #### getElementsByTagName()
+
+  Metoda ``getElementsByTagName()`` zwraca tablicę elementów, które posiadają daną nazwę tagu. Metoda ta może zwrócić wiele elementów, które mają ten sam tag.
+  
+  > Przykładowe zastosowanie metody ``getElementsByTagName()`` to:
+
+  ```javascript
+  const elements = document.getElementsByTagName("p");
+  for(let i = 0; i < elements.length; i++){
+    elements[i].classList.add("newClass");
+  }
+  ```
+  
+  #### querySelector()
+
+  Metoda ``querySelector()`` zwraca pierwszy element, który odpowiada danemu selektorowi CSS. 
+  
+  > Przykładowe zastosowanie metody ``querySelector()`` to:
+  ```javascript
+  const element = document.querySelector(".myClass > span");
+  element.innerHTML = "New text";
+  ```
+
+  #### querySelectorAll()
+
+  Metoda ``querySelectorAll()`` zwraca wszystkie elementy, które odpowiadają danemu selektorowi CSS.
+  
+  > Przykładowe zastosowanie metody ``querySelectorAll()`` to:
+
+  ```javascript
+  const elements = document.querySelectorAll("a[href='http']");
+  for(let i = 0; i < elements.length; i++){
+    elements[i].target = "_blank";
+  }
+  ```
+
+  #### parentElement
+
+  W niektórych przypadkach, gdy potrzebujemy pobrać element nadrzędny, możemy użyć właściwości ``parentElement``. 
+  
+  > Przykładowe zastosowanie właściwości ``parentElement`` to:
+
+  ```javascript
+  const child = document.getElementById("myChildElement");
+  const parent = child.parentElement;
+  parent.style.border = "1px solid black";
+  ```
+
+  > Podsumowując, pobieranie elementów DOM jest niezbędne w procesie tworzenia interaktywnych stron internetowych. W JavaScript, mamy wiele metod, które pozwalają na dostęp do każdego elementu na stronie. Metody te umożliwiają wybór elementów na podstawie identyfikatora, klasy, nazwy tagu oraz selektora CSS. Znajomość tych metod jest kluczowa w programowaniu stron internetowych, ponieważ pozwala na manipulowanie elementami DOM w celu uzyskania pożądanych efektów wizualnych i funkcjonalnych.
+
+### 📝 Manipulacja treścią elementów
+  Aby zmienić treść elementu, można użyć właściwości ``innerHTML`` lub ``textContent``. Właściwość ``innerHTML`` pozwala na manipulowanie zawartością elementu w formie kodu HTML, natomiast ``textContent`` pozwala na manipulowanie zawartością elementu w formie zwykłego tekstu.
+
+  #### Właściwość innerHTML
+
+  Właściwość ``innerHTML`` pozwala na manipulowanie zawartością elementu w formie kodu HTML. Właściwość ta zwraca lub ustawia treść elementu, a także wszystkie elementy podrzędne. 
+  
+  Przykładowo, mając element 
+  ``<div id="myDiv">Hello World</div>`` można użyć ``innerHTML`` w następujący sposób:
+
+  ```javascript
+  const myDiv = document.getElementById("myDiv");
+  myDiv.innerHTML = "Hello <b>JavaScript</b> World";
+  ```
+
+  W powyższym przykładzie, tekst "Hello World" został zastąpiony przez ``"Hello <b>JavaScript</b> World"``, co spowoduje, że słowo "JavaScript" zostanie pogrubione w wyświetlanym tekście.
+
+  Właściwość ``innerHTML`` może być również użyta do dodawania lub usuwania elementów. Na przykład, aby dodać nowy element do elementu ``<div>``, można użyć:
+
+  ```javascript
+  myDiv.innerHTML += "<p>New paragraph</p>";
+  ```
+  W powyższym przykładzie, dodany zostanie nowy element 
+  ```html
+  <p>New paragraph</p> 
+  ```
+  do elementu 
+  ```html
+  <div id="myDiv">
+  ```
+  #### Właściwość textContent
+
+  Właściwość textContent pozwala na manipulowanie zawartością elementu w formie zwykłego tekstu. Właściwość ta zwraca lub ustawia tekst elementu, a wszystkie znaczniki HTML zostaną zignorowane. Na przykład, mając element 
+  ```html
+  <p id="myP">Hello <b>JavaScript</b> World</p>
+  ```
+  można użyć ``textContent`` w następujący sposób:
+
+  ```javascript
+  const myP = document.getElementById("myP");
+  myP.textContent = "Hello JavaScript World";
+  ```
+
+  W powyższym przykładzie, tekst ``"Hello <b>JavaScript</b> World"`` zostanie zastąpiony przez "Hello JavaScript World", co spowoduje, że słowo "JavaScript" ``nie będzie pogrubione`` w wyświetlanym tekście.
+
+  Właściwość ``textContent`` jest często używana do pobierania tekstu z elementów. Na przykład, mając element:
+  
+  ```html
+  <p id="myP">Hello JavaScript World</p>
+  ```
+
+  można użyć ``textContent`` w następujący sposób, aby uzyskać tekst elementu:
+
+  ```javascript
+  const myP = document.getElementById("myP");
+  const text = myP.textContent;
+  console.log(text); // "Hello JavaScript World"
+  ```
+
+  Właściwość textContent jest przydatna do ustawienia wartości tekstowej formularza lub do manipulowania tekstem w tabelach. W przeciwieństwie do ``innerHTML``, nie pozwala na dodawanie lub usuwanie elementów, ale jest znacznie bezpieczniejsza w stosowaniu, ponieważ ``wszystkie znaczniki HTML są ignorowane``, a tekst jest renderowany dokładnie.
+
+### 🆕 Dodawanie i usuwanie elementów
+  Aby dodać nowy element do strony, należy utworzyć nowy element za pomocą metody ``createElement()`` i dodać go do drzewa DOM za pomocą metody ``appendChild()``. Aby usunąć element, można użyć metody ``removeChild()``.
+
+  #### Metoda createElement()
+
+  Metoda ``createElement()`` służy do tworzenia nowych elementów w DOM. Metoda ta przyjmuje jeden argument - nazwę tagu elementu. Na przykład, aby utworzyć nowy element ``<p>``, można użyć:
+
+  ```javascript
+  const newParagraph = document.createElement("p");
+  ```
+  Nowy element ``<p>`` zostanie utworzony, ale nie zostanie dodany do strony.
+
+  #### Metoda appendChild()
+
+  Metoda ``appendChild()`` służy do dodawania nowych elementów do drzewa DOM. Metoda ta przyjmuje jeden argument - nowy element, który ma zostać dodany do drzewa DOM. Na przykład, aby dodać nowy element ``<p>`` do elementu ``<div>``, można użyć:
+
+  ```javascript
+  const newParagraph = document.createElement("p");
+  const myDiv = document.getElementById("myDiv");
+  myDiv.appendChild(newParagraph);
+  ```
+
+  W powyższym przykładzie, utworzony został nowy element ``<p>``, a następnie został dodany do elementu ``<div>`` o identyfikatorze ``myDiv``. Nowy element zostanie dodany jako ostatnie dziecko elementu ``<div>``.
+  
+  #### Metoda removeChild()
+
+  Metoda ``removeChild()`` służy do usuwania elementów z drzewa DOM. Metoda ta przyjmuje ``jeden argument - element``, który ma zostać usunięty z drzewa DOM. Na przykład, aby usunąć element ``<p>`` z elementu ``<div>``, można użyć:
+
+  ```javascript
+  const myDiv = document.getElementById("myDiv");
+  const paragraphToRemove = myDiv.querySelector("p");
+  myDiv.removeChild(paragraphToRemove);
+  ```
+
+  W powyższym przykładzie, został pobrany element ``<p>`` z elementu ``<div>``, a następnie został usunięty z drzewa DOM.
+
+  Metoda ``removeChild()`` jest szczególnie przydatna do dynamicznej modyfikacji strony internetowej, w której elementy muszą być dodawane i usuwane w zależności od akcji użytkownika.
+
+### 🧱 Manipulacja atrybutami elementów
+  Atrybuty elementów HTML to dodatkowe informacje, które można dodać do elementów HTML w celu określenia ich wyglądu, funkcjonalności i innych właściwości. Aby dodać lub zmienić atrybuty elementów DOM, można użyć metody ``setAttribute()``.
+
+  #### Metoda setAttribute()
+
+  Metoda ``setAttribute()`` służy do ustawiania wartości atrybutu elementu. Metoda ta przyjmuje dwa argumenty: nazwę atrybutu i wartość atrybutu. 
+  
+  Na przykład, aby dodać atrybut class do elementu ``<p>``, można użyć:
+
+  ```javascript
+  const myParagraph = document.createElement("p");
+  myParagraph.setAttribute("class", "my-class");
+  ```
+
+  W powyższym przykładzie, został utworzony nowy element ``<p>`` i do niego został dodany atrybut class o wartości ``my-class``.
+
+  Metoda ``setAttribute()`` jest również przydatna, gdy chcemy zmienić wartość istniejącego atrybutu. 
+  
+  Na przykład, aby zmienić wartość atrybutu class dla elementu ``<p>``, można użyć:
+
+  ```javascript
+  const myParagraph = document.getElementById("my-paragraph");
+  myParagraph.setAttribute("class", "new-class");
+  ```
+
+  W powyższym przykładzie, został pobrany element ``<p>`` o identyfikatorze ``my-paragraph``, a następnie została zmieniona wartość atrybutu class na ``new-class``.
+
+  #### Metoda getAttribute()
+
+  Metoda ``getAttribute()`` służy do pobierania wartości atrybutu elementu. Metoda ta przyjmuje ``jeden argument - nazwę atrybutu``, którego wartość chcemy pobrać. 
+  
+  Na przykład, aby pobrać wartość atrybutu class dla elementu ``<p>``, można użyć:
+
+  ```javascript
+  const myParagraph = document.getElementById("my-paragraph");
+  const paragraphClass = myParagraph.getAttribute("class");
+  ```
+  W powyższym przykładzie, został pobrany element ``<p>`` o identyfikatorze ``my-paragraph``, a następnie została pobrana wartość atrybutu class. Wartość ta zostanie zapisana w zmiennej ``paragraphClass``.
+
+  Metoda ``getAttribute()`` może być również użyta do pobrania wartości innych atrybutów, takich jak ``id``, ``href``, ``src``, itp.
+
+  Manipulowanie atrybutami elementów HTML za pomocą ``setAttribute()`` i ``getAttribute()`` jest często wykorzystywane przy tworzeniu stron internetowych i aplikacji internetowych. Przykładowymi zastosowaniami tej metody mogą być dodawanie atrybutów do linków, zdjęć lub formularzy, a także do wykonywania operacji warunkowych w zależności od wartości atrybutów.
+
+### 📅 Obsługa zdarzeń
+  Aby obsłużyć zdarzenie, można użyć metody ``addEventListener()``. Metoda ta umożliwia dodanie funkcji do elementu, która zostanie wykonana po wystąpieniu określonego zdarzenia (np. kliknięcie).
+
+  Metoda ``addEventListener()`` umożliwia obsługę różnych typów zdarzeń, takich jak kliknięcie, zmiana wartości, załadowanie strony czy wciśnięcie klawisza na klawiaturze. Aby obsłużyć konkretne zdarzenie, należy jako pierwszy argument podać jego nazwę, a jako drugi argument funkcję, która zostanie wykonana w momencie wystąpienia tego zdarzenia.
+
+  Przykład obsługi zdarzenia zmiany wartości pola tekstowego:
+
+  ```javascript
+  // Przykładowy element HTML z identyfikatorem "my-input"
+  const myInput = document.getElementById("my-input");
+
+  // Dodanie funkcji obsługującej zmianę wartości pola tekstowego
+  myInput.addEventListener("input", () => {
+    console.log("Wartość pola tekstowego została zmieniona!");
+  });
+  ```
+    
+  W tym przykładzie dodana jest funkcja, która zostanie wykonana za każdym razem, gdy użytkownik zmieni wartość pola tekstowego. Dzięki temu można na bieżąco wykonywać jakieś operacje w zależności od wprowadzanych danych.
+
+  Metoda ``addEventListener()`` pozwala również na usuwanie funkcji obsługującej zdarzenia. Aby to zrobić, należy użyć metody ``removeEventListener()`` i podać takie same argumenty, jakie zostały użyte przy dodawaniu funkcji obsługującej.
+
+  Przykład usuwania funkcji obsługującej kliknięcie przycisku:
+
+  ```javascript
+  // Przykładowy element HTML z identyfikatorem "my-button"
+  const myButton = document.getElementById("my-button");
+
+  // Definicja funkcji obsługującej kliknięcie przycisku
+  const handleClick = () => {
+    console.log("Kliknięto przycisk!");
+  }
+
+  // Dodanie funkcji obsługującej kliknięcie przycisku
+  myButton.addEventListener("click", handleClick);
+
+  // po 3 sekundach usuwamy nasłuchiwacz zdarzeń
+  setTimeout(() => {
+      myButton.removeEventListener('click', handleClick);
+  }, 3000);
+  ```
+  W tym przykładzie funkcja ``handleClick()`` zostaje najpierw dodana do elementu myButton, a następnie usunięta po 3 sekundach przy użyciu metody ``removeEventListener()``.
+
+### 🎯 Efektywność
+  Aby zoptymalizować wydajność manipulacji elementami DOM, zaleca się minimalizowanie liczby wykonywanych operacji na drzewie DOM oraz stosowanie technik jak debouncing, throttling czy fragmentowanie aktualizacji.
+  
+  Manipulacja elementami DOM może wpłynąć na wydajność strony internetowej, zwłaszcza gdy operacje są wykonywane często lub na dużych drzewach DOM. Dlatego ważne jest, aby stosować pewne techniki optymalizacji, które pozwolą na minimalizowanie liczby operacji i zmniejszenie czasu potrzebnego na ich wykonanie.
+
+  Jedną z takich technik jest ``debouncing``. Polega ona na tym, że funkcja wywoływana po zdarzeniu (np. przewijanie strony) jest uruchamiana po określonym czasie od ostatniego wystąpienia zdarzenia. Dzięki temu unikamy wielokrotnego wywoływania funkcji i zwiększamy wydajność strony.
+
+  Inną techniką jest ``throttling``. Polega ona na tym, że funkcja wywoływana po zdarzeniu jest uruchamiana co określony czas, niezależnie od tego, ile razy wystąpiło zdarzenie. W ten sposób unikamy wywoływania funkcji zbyt często i zwiększamy wydajność strony.
+
+  Kolejną ważną techniką jest ``fragmentacja aktualizacji``. Polega ona na tym, że manipulacje na elementach DOM są grupowane w jedną operację, zamiast wykonywać je pojedynczo. Na przykład, zamiast zmieniać styl elementu w pętli, warto zmienić styl poza pętlą i tylko raz odświeżyć element. W ten sposób unikamy wielokrotnego odświeżania elementów i zwiększamy wydajność strony.
+
+  > Poniżej przedstawiono przykład kodu, który demonstruje zastosowanie powyższych technik do zoptymalizowania wydajności manipulacji elementami DOM:
+
+  ```javascript
+  // debouncing
+  // funkcja jest wywoływana po upływie 500ms od ostatniego zdarzenia
+  let debounceTimer;
+  window.addEventListener('scroll', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() {
+      console.log('Scroll end');
+    }, 500);
+  });
+
+  // throttling
+  // funkcja jest wywoływana co 500ms
+  let throttleTimer;
+  window.addEventListener('scroll', function() {
+    if (!throttleTimer) {
+      throttleTimer = setTimeout(function() {
+        throttleTimer = null;
+        console.log('Scrolling');
+      }, 500);
+    }
+  });
+
+  // fragmentacja aktualizacji
+  // zmiana stylu elementów jest grupowana w jedną operację
+  let elements = document.querySelectorAll('.box');
+  elements.forEach(function(element) {
+    element.style.backgroundColor = 'red';
+  });
+  ```
+W powyższym kodzie użyto ``setTimeout()`` do implementacji debouncingu i throttlingu. W przypadku fragmentacji aktualizacji, zmiana stylu elementów jest grupowana w jedną operację poprzez użycie metody ``forEach()``. Dzięki temu, manipulacje na elementach DOM są zoptymalizowane i strona działa szybciej i bardziej płynnie.
+
+> Warto pamiętać, że manipulacja elementami DOM może mieć wpływ na wydajność strony internetowej, dlatego zaleca się stosowanie najlepszych praktyk i minimalizowanie liczby operacji na drzewie DOM.
+
+---
