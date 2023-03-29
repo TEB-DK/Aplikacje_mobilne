@@ -795,13 +795,21 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
 
   2. Utwórz nowy konstruktor ``Persons`` i stwórz 3 obiekty według niego (niech posiadają imie oraz wiek), następnie wstaw obiekty do tablicy i posortuj je, wyświetl wynik sortowania (metoda sort()).
 
-  3. Stwórz konstruktor ``Sorter`` w którym utworzysz metodę ``sortowania bąbelkowego``, utwórz obiekt na jego podstawie i zastosuj zaimplementowaną metode.
+  3. Stwórz konstruktor ``Sorter`` w którym utworzysz metodę ``sortowania szybkiego``, utwórz obiekt na jego podstawie i zastosuj zaimplementowaną metode.
 
       <details>
       <summary>🌠 Wskazówka</summary>
       <p>
 
-      > Należy napisać konstruktor JavaScript o nazwie "Sorter", który będzie zawierał metodę sortowania bąbelkowego. Metoda sortowania bąbelkowego jest jednym z najprostszych algorytmów sortowania, który polega na porównywaniu sąsiednich elementów w tablicy i zamienianiu ich kolejności, jeśli są w niewłaściwej kolejności. Następnie powtarza się ten proces dla kolejnych par elementów aż do uzyskania posortowanej tablicy. Po napisaniu konstruktora, należy utworzyć obiekt na jego podstawie i wywołać metodę sortowania bąbelkowego dla wybranej tablicy. Wynik sortowania należy wyświetlić w konsoli lub na stronie HTML.
+      > QuickSort to algorytm sortowania, który działa na zasadzie podziału i podbierania.
+
+        Pierwszym krokiem jest wybór elementu, który będzie pełnił rolę punktu odniesienia, nazywanego często "piwotem". W praktyce można wybrać dowolny element z listy, ale zazwyczaj wybiera się element środkowy, pierwszy lub ostatni.
+
+        Następnie lista zostaje podzielona na dwie części: mniejszą od piwota i większą od piwota. Elementy mniejsze od piwota umieszczane są przed nim, a większe - za nim.
+
+        Proces ten jest powtarzany rekurencyjnie dla obu podlist, aż do momentu, gdy zostanie osiągnięta lista jednoelementowa, która jest już w pełni posortowana.
+
+        Warto zauważyć, że QuickSort jest jednym z najszybszych algorytmów sortowania, a jego złożoność czasowa wynosi O(n log n) w przypadku optymalnym, co oznacza, że działa znacznie szybciej niż wiele innych popularnych algorytmów sortowania.
 
       </p>
       </details>
@@ -813,7 +821,7 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
       let sorter = new Sorter([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]);
       console.log("Przed sortowaniem: " + sorter.array);
       // Przed sortowaniem: [3,1,4,1,5,9,2,6,5,3,5]
-      sorter.bubbleSort();
+      sorter.quickSort();
       console.log("Po sortowaniu: " + sorter.array);
       // Po sortowaniu: [1,1,2,3,3,4,5,5,5,6,9]
       ```
