@@ -1141,4 +1141,238 @@ W powyższym kodzie użyto ``setTimeout()`` do implementacji debouncingu i throt
 
 > Warto pamiętać, że manipulacja elementami DOM może mieć wpływ na wydajność strony internetowej, dlatego zaleca się stosowanie najlepszych praktyk i minimalizowanie liczby operacji na drzewie DOM.
 
+### 🌟 Zadania do wykonania
+> Zadania realizowane będą na przygotowanej stronie przez prowadzącego pod linkiem poniżej.
+> Po przejściu na stronę, należy w __prawym górnym rogu__ kliknąć ``Edit in JS Bin`` i otworzyć zakładkę ``JavaScript``.
+
+[ 🔗 Przenieś mnie do strony testowej!](https://jsbin.com/kimopoputu/3)
+
+1. Utwórz nowy element ``<div>`` i dodaj go do elementu ``<body>`` strony.
+
+2. Znajdź element ``<h1>`` na stronie i zmień jego kolor na czerwony.
+
+3. Ustaw wartość atrybutu ``src`` elementu ``<img>`` na nowy obrazek.
+
+4. Ukryj element ``<p>`` na stronie.
+
+5. Dodaj nową klasę do elementu ``<div>`` na stronie.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const div = 
+    div.classList.___('');
+    ```
+
+    </details>
+
+6. Usuń klasę ``active`` z elementu ``<li>``, który ją zawiera.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const activeListItem = document.querySelector('');
+    activeListItem.classList.______('');
+    ```
+
+    </details>
+
+7. Zmień tekst elementu ``<button>`` na stronie na ``Przycisk!``.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const button = document
+    button.textC______ = 
+    ```
+
+    </details>
+
+8. Znajdź element ``<input>`` na stronie i ustaw jego wartość na pusty ciąg znaków.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const input = document.querySelector('');
+    input._____ = '';
+    ```
+
+    </details>
+
+9. Dodaj nowy element ``<li>`` do listy ``<ul>`` na stronie.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const newListElement = document.______Element('');
+    const unorderedList = document.querySelector('');
+    unorderedList.______Child();
+    ```
+
+    </details>
+
+10. Zmień kolor tła elementu ``<body>`` strony na niebieski.
+
+11. Utwórz nowy element ``<div>`` o klasie ``new-div`` i dodaj go do elementu ``<header>`` strony.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const newDiv = document._____________('');
+    newDiv._________.add('');
+    const header = document.querySelector('');
+    header.append_____();
+    ```
+
+    </details>
+
+12. Znajdź drugi element ``<h1>`` na stronie i zmień jego kolor na zielony.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const headers = document.query__________('');
+    if (headers.______ > 1) {
+      headers[1].style._____ = '';
+    }
+    ```
+
+    </details>
+
+13. Ustaw wartość atrybutu ``data-src`` elementu ``<img>`` na nowy obrazek i usuń atrybut ``src``.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const image = document.query________('');
+    image.dataset.src = 'newImage.jpg';
+    image.remove_________('');
+    ```
+
+    </details>
+
+14. Ukryj co drugi element ``<p>`` na stronie.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const paragraphs = document.querySelector___('');
+    for (let i = 1; i < paragraphs.______; i += 2) {
+      paragraphs[i]._____.display = 'none';
+    }
+    ```
+
+    </details>
+
+15. Dodaj nową klasę ``selected`` do elementu ``<li>`` z numerem 3 w ``<ul>`` na stronie.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```javascript
+    const listItems = document._____SelectorAll('');
+    if (listItems.______ >= 3) {
+      const thirdListItem = listItems[_];
+      thirdListItem.class____.___('selected');
+    }
+    ```
+
+    </details>
+
+16. Utwórz przycisk, który po kliknięciu będzie dodawał nowy element listy na górze listy (zamiast na dole, jak w poprzednim zadaniu).
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```html
+    <details>
+      <summary>Zadanie 1</summary>
+      <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+      </ul>
+      <button onclick="addElement()">Dodaj element na górze</button>
+    </details>
+    ```
+    ```javascript
+    function addElement() {
+      var list = document._____Selector('');
+      var newItem = document._____________('');
+      newItem.____Content = 'Nowy element';
+      list.insertBefore(_______, list.firstChild);
+    }
+    ```
+
+    </details>
+
+17. Utwórz przycisk, który po kliknięciu będzie usuwał co drugi element listy (począwszy od drugiego elementu).
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```html
+    <details>
+      <summary>Zadanie 2</summary>
+      <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>Element 4</li>
+        <li>Element 5</li>
+        <li>Element 6</li>
+      </ul>
+      <button onclick="removeElements()">Usuń co drugi element</button>
+    </details>
+    ```
+    ```javascript
+    function removeElements() {
+      var listItems = document.querySelectorAll('');
+      for (var i = 0; i < listItems.______; i++) {
+        
+      }
+    }
+    ```
+   </details>
+
+18. Utwórz pole tekstowe i przycisk, które po kliknięciu będą dodawać nowy paragraf z tekstem z pola tekstowego na końcu sekcji ``Tekst``.
+
+    <details>
+    <summary> 🌠 Wskazówka</summary>
+
+    ```html
+    <details>
+      <summary>Zadanie 3</summary>
+      <section>
+        <h2>Tekst</h2>
+        <p>Paragraf 1</p>
+        <p>Paragraf 2</p>
+      </section>
+      <form onsubmit="addParagraph(event)">
+        <input type="text" id="newParagraph" placeholder="Wpisz tekst...">
+        <button type="submit">Dodaj paragraf</button>
+      </form>
+    </details>
+    ```
+    ```javascript
+    function addParagraph(_____) {
+      event.preventDefault();
+      var text = document.____Selector('#__________')._____;
+      var newParagraph = document.____________('');
+      newParagraph.text______ = text;
+      document.querySelector('section').___________(____________);
+    }
+    ```
+
+  </details>
+  
 ---
