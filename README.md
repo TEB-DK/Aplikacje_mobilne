@@ -1375,4 +1375,5 @@ W powyższym kodzie użyto ``setTimeout()`` do implementacji debouncingu i throt
 
   </details>
   
+  - Zmodyfikuj funkcję tak, aby po dodaniu elementu czyściła pole wprowadzania tekstu.
 ---
