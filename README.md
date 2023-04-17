@@ -130,7 +130,7 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   > porównuje obie wartości i ich typ
   ```javascript
   const a = 10;
-  console.log(a === 10) //false
+  console.log(a === 10) //true
   console.log(a === "10") //false
   ```
 
