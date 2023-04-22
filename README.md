@@ -559,9 +559,9 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
 
   // Lub drugi sposob
 
-  czlowiek.["imie"];
-  czlowiek.["wiek"];
-  czlowiek.["wytlumaczZagadnienie"]();
+  czlowiek["imie"];
+  czlowiek["wiek"];
+  czlowiek["wytlumaczZagadnienie"]();
   ```
 
   Jednak w tym przypadku i jedna i druga wersja ma swoje zastosowanie, pierwsza jest jednak wygodniejsza, ale.. nie możemy nią zapisać chociażby notacji daty.
