@@ -1377,3 +1377,114 @@ W powyższym kodzie użyto ``setTimeout()`` do implementacji debouncingu i throt
   
   - Zmodyfikuj funkcję tak, aby po dodaniu elementu czyściła pole wprowadzania tekstu.
 ---
+
+      import React, { useState } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+
+const achievementsList = [
+  { name: 'Początkujący', icon: '👶', value: 10 },
+  { name: 'Amator', icon: '🧑‍🎓', value: 50 },
+  { name: 'Mistrz Klikera', icon: '🏆', value: 100 },
+  { name: 'Klikacz na emeryturze', icon: '👴', value: 500 },
+  { name: 'Klikacz Super Mocy', icon: '💪', value: 1000 },
+  { name: 'Klikacz Pro', icon: '👨‍💼', value: 5000 },
+  { name: 'Klikatron', icon: '💯', value: 10000 },
+  { name: 'Wytrwały Kliker', icon: '🚹', value: 20000 },
+  { name: 'Szaleniec!', icon: '🤪', value: 30000 },
+  { name: 'Szef', icon: '😎', value: 40000 },
+  { name: 'Szef wszystkich szefów', icon: '🤯', value: 50000 },
+  { name: 'HAKER', icon: '👾', value: 100000 },
+  { name: 'BOT', icon: '🤖', value: 1000000 },
+  // kolejne osiągnięcia...
+];
+
+const Clicker = () => {
+  const [count, setCount] = useState(0);
+  const [unlockedAchievements, setUnlockedAchievements] = useState([]);
+
+  const handleClick = (value) => {
+    setCount(count + value);
+
+    // Sprawdzanie osiągnięć możliwych do odblokowania
+    const newUnlocked = achievementsList.filter(
+      (achievement) => !unlockedAchievements.includes(achievement) && count >= achievement.value
+    );
+    setUnlockedAchievements([...unlockedAchievements, ...newUnlocked]);
+  };
+
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity style={styles.button} onPress={() => handleClick(1)}>
+        <Text style={styles.buttonText}>Kliknij mnie!</Text>
+      </TouchableOpacity>
+      <Text style={styles.counter}>{count}</Text>
+      <View style={styles.achievementsContainer}>
+        {achievementsList.map((achievement, index) => (
+          <TouchableOpacity
+            key={index}
+            style={[styles.achievement, unlockedAchievements.includes(achievement) && styles.unlockedAchievement]}
+            onPress={() => {
+              if (count >= 1000 && achievement.value === 1000) {
+                handleClick(100);
+              }
+            }}
+          >
+            <Text style={styles.achievementText}>{achievement.icon}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FAFAFA',
+  },
+  achievementTitle: {
+    color: "#333",
+    marginBottom: 16,
+  },
+  button: {
+    backgroundColor: '#2196F3',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  buttonText: {
+    color: '#FFF',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  counter: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    color: "#2196F3"
+  },
+  achievementsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  achievement: {
+    backgroundColor: '#DDD',
+    padding: 10,
+    margin: 5,
+    borderRadius: 10,
+  },
+  unlockedAchievement: {
+    backgroundColor: '#FFD700',
+  },
+  achievementText: {
+    fontSize: 20,
+  },
+});
+
+export default Clicker;
+      
+      
