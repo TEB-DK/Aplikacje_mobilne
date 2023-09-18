@@ -203,7 +203,7 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   ### Deklaracja funkcji
   
   ```javascript
-  function nazwa_funkcji(nazwa_argumentu){
+  const nazwa_funkcji = (nazwa_argumentu) => {
     return nazwa_argumentu + 10
   }
 
@@ -217,7 +217,7 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   > Dla każdej funkcji możemy utworzyć argumenty. To nic innego jak zmienne wykorzystywane w ciele funkcji, które można przypisać pod dowolne wartości podawane do funkcji.
   
   ```javascript
-  function potrojne_mnozenie(a, b, c) {
+  const potrojne_mnozenie = (a, b, c) => {
       return a * b * c;
   }
 
@@ -226,7 +226,7 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   ```
   
   ```javascript
-  function wlasciciel_zwierze(imie_wlasciciela, zwierze) {
+  const wlasciciel_zwierze = (imie_wlasciciela, zwierze) => {
       console.log(imie_wlasciciela + " ma " + zwierze);
   }
 
@@ -238,7 +238,7 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   > Dla argumentów możemy też ustawiać domyślne wartości. Wystarczy po nazwie parametru ustawić mu domyślną wartość
 
   ```javascript
-  function wlasciciel_zwierze(imie_wlasciciela = "Pawel", zwierze = "Orangutana") {
+  const wlasciciel_zwierze = (imie_wlasciciela = "Pawel", zwierze = "Orangutana") => {
       console.log(imie_wlasciciela + " ma " + zwierze);
   }
 
@@ -395,7 +395,7 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   Operator ten może być również zastosowany jako tablica argumentów
 
   ```javascript
-  function wlasciciel_zwierze(imie_wlasciciela = "Tomek", ...zwierzeta) {
+  const wlasciciel_zwierze = (imie_wlasciciela = "Tomek", ...zwierzeta) => {
       console.log("To jest " + imie_wlasciciela);
 
       if (zwierzeta.length) {
@@ -510,12 +510,12 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
       <p>
       
       ```javascript
-      var arr1 = [1, 2, 3, 4, 5];
-      var arr2 = [6, 7, 8, 9, 10];
-      var arr3 = [11, 12, 13, 14, 15];
-      var arr4 = [16, 17, 18, 19, 20];
+      const arr1 = [1, 2, 3, 4, 5];
+      const arr2 = [6, 7, 8, 9, 10];
+      const arr3 = [11, 12, 13, 14, 15];
+      const arr4 = [16, 17, 18, 19, 20];
 
-      var result = findMaxSumArray(arr1, arr2, arr3, arr4);
+      const result = findMaxSumArray(arr1, arr2, arr3, arr4);
 
       console.log(result); // [16, 17, 18, 19, 20]
       ```
@@ -603,7 +603,7 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
   Aby zdestrukturyzować chociażby obiekt możemy również użyć takiego zapisu
 
   ```javascript
-  function wypiszMnie({imie, wiek}) {
+  const wypiszMnie = ({imie, wiek}) => {
       console.log(imie);
       console.log(wiek);
   }
