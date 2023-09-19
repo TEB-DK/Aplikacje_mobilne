@@ -522,6 +522,19 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
 
       </p>
       </details>
+
+6. Zapisz funkcję, która przyjmuje dwie tablice, zadaniem funkcji jest zwrócenie tablicy z unikatowymi wartościami z obu tablic.
+7. Zapisz funkcję, która przyjmuję nieskończenie wiele tablic (również różnego poziomu zagnieżdżenia) i zwraca tablicę z unikatowymi wartościami wszystkich tablic.
+   <details>
+     <summary> Oczekiwany wynik </summary>
+     
+     ```javascript
+      const clear = removeDuplicates([1,2,3,[4,5,6]], [1,6,66,2,3,6,8,4,[[3,8,0,123]]])
+      console.log(clear) // [1,2,3,4,5,6,66,8,0,123]
+     ```
+     
+   </details>
+   
 ## 🤖 Obiekty
 
   ### Co to jest obiekt?
