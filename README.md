@@ -534,7 +534,22 @@ JavaScript jest bardzo łatwym językiem do rozpoczęcia nauki programowania, zw
      ```
      
    </details>
-   
+ 8. Stwórz funkcję która przy podanej tablicy liczb, zwróci nową tablicę, która ma liczby większe lub równe `6`. (wykorzystaj metodę `.filter()`)
+ 9. Stwórz funkcję, która przy podanej tablicy liczb, zwróci nową tablicę, która będzie będzie zawierać dwie podtablicę, pierwszą z liczbami nieparzystymi, drugą z parzystymi. (wykorzystaj metodę `.filter()`)
+ 10. Stwórz funkcję, która przyjmie tablicę obiektów i zwróci tablicę, która przefiltruje wszystkich członków, którzy nie należą do klubu illuminati. (wykorzystaj metodę `.filter()`)
+     <details>
+       <summary>Tablica obiektów</summary>
+
+        ```javascript
+          const illuminati_club = [
+          { name: "Angelina Jolie", member: true },
+          { name: "Eric Jones", member: false },
+          { name: "Paris Hilton", member: true },
+          { name: "Kayne West", member: false },
+          { name: "Bob Ziroll", member: true }]
+        ```
+
+     </details>
 ## 🤖 Obiekty
 
   ### Co to jest obiekt?
