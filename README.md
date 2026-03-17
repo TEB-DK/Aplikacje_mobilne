@@ -1445,3 +1445,41 @@ W powyższym kodzie użyto ``setTimeout()`` do implementacji debouncingu i throt
 28. Dodaj atrybut data-test="123" do `.card.highlight`
 29. Zmień textContent wszystkich `.menu-list li` na "Zmieniono"
 30. Pobierz wszystkie elementy z klasą `.card` i dodaj im klasę "processed" oraz ustaw atrybut data-status="done"
+
+>[!NOTE]
+> Aby obsłużyć zdarzenia w JavaScript używamy metody addEventListener. Najpierw pobieramy element (np. przycisk) za pomocą querySelector, a następnie dodajemy nasłuchiwanie zdarzenia, np. `click`, `input`, `change`, `submit`, `mouseover`, `mouseout`, `keydown`, `toggle`.
+
+```js
+const element = document.querySelector("selektor")
+element.addEventListener("typ_zdarzenia", (event) => {
+  // tutaj kod
+})
+```
+
+Możesz wewnątrz:
+- zmieniać textContent
+- dodawać/usuwać elementy
+- manipulować klasami
+- korzystać z event.target
+- reagować na wpisywany tekst lub zmianę wartości
+
+
+31. Dodaj eventListener typu `click` do przycisku `#add-item-btn`, który po kliknięciu pobierze wartość z inputa i doda nowy element li do `#dynamic-list`
+
+32. Dodaj eventListener typu `input` do pola `#item-input`, który na bieżąco wypisuje jego wartość w konsoli
+
+33. Dodaj eventListener typu `click` do `#insert-before-btn`, który tworzy nowy `.box` i wstawia go na początek `#insertion-container`
+
+34. Dodaj eventListener typu `click` do `#add-box-btn`, który dodaje nowy `.box` do `.boxes-container`
+
+35. Dodaj eventListener typu `click` do wszystkich elementów `.removable`, który usuwa kliknięty element (użyj event.target)
+
+36. Dodaj eventListener typu `submit` do formularza `#test-form`, który blokuje odświeżenie strony (preventDefault)
+
+37. Dodaj eventListener typu `change` do selecta `.select`, który wypisuje wybraną wartość w konsoli
+
+38. Dodaj eventListener typu `toggle` do elementu `details.info-box`, który reaguje na jego otwarcie/zamknięcie
+
+39. Dodaj eventListener typu `mouseover` oraz `mouseout` do wszystkich `.card`, który zmienia ich styl (np. dodaje i usuwa klasę)
+
+40. Dodaj eventListener typu `keydown` do inputa name="name", który wykrywa naciśnięcie klawisza Enter i wypisuje tekst inputa w konsoli
