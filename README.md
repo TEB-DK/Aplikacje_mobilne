@@ -1405,3 +1405,43 @@ W powyższym kodzie użyto ``setTimeout()`` do implementacji debouncingu i throt
   
   - Zmodyfikuj funkcję tak, aby po dodaniu elementu czyściła pole wprowadzania tekstu.
 ---
+
+### 🌟 Zadania do wykonania v2
+> Zadania realizowane będą na przygotowanej stronie przez prowadzącego pod linkiem poniżej.
+
+[ 🔗 Przenieś mnie do strony testowej!](https://jsfiddle.net/7vd3yg1x/)
+
+
+1. Pobierz element `.title` i zmień jego textContent na "DOM Training Arena"
+2. Znajdź pierwszy element `.nav-item a` i zmień jego tekst na "Start"
+3. Pobierz wszystkie elementy `.menu-list li` i wypisz ich `textContent` w konsoli
+4. Znajdź element `.card.highlight` i dodaj mu klasę `active`
+5. Zmień tekst pierwszego `.card .card-header` na "Zmieniona karta"
+6. Pobierz `.info-text` z `<details>` i zmień jego tekst
+7. Znajdź input name="name" i ustaw jego value na "Jan"
+8. Znajdź select `.select` i ustaw wybraną opcję na "de"
+9. Pobierz checkbox `.checkbox` i zaznacz go (checked = true)
+10. Znajdź `.deep-text` i dodaj do niego klasę "highlight"
+
+11. Utwórz nowy `<li>` z tekstem "Nowy element" i dodaj go do #dynamic-list
+12. Dodaj 3 nowe elementy `<li>` do `.menu-list`
+13. Stwórz nowy `<div class="card">` i dodaj go do `.cards-section`
+14. Dodaj nowy `.box` do `.boxes-container`
+15. Dodaj element `<p>` do `.dynamic-area` z dowolnym tekstem
+16. Wstaw nowy `.box` jako pierwszy element w `#insertion-container` (insertBefore)
+17. Stwórz element `<li>` i wstaw go jako pierwszy element w `#dynamic-list`
+18. Dodaj `<span>` do każdego `.card-header`
+19. Dodaj nowy element do `<details>` (np. `<p>`)
+20. Utwórz przycisk i dodaj go do `.playground`
+
+21. Usuń wszystkie elementy `.removable`
+22. Usuń ostatni element z `#dynamic-list`
+23. Usuń .card o `data-id="1"`
+24. Usuń wszystkie `.box` z `#insertion-container`
+25. Usuń cały element `<details>`
+
+26. Pobierz wszystkie inputy w formularzu i wypisz ich name
+27. Zmień name="email" na "user-email"
+28. Dodaj atrybut data-test="123" do `.card.highlight`
+29. Zmień textContent wszystkich `.menu-list li` na "Zmieniono"
+30. Pobierz wszystkie elementy z klasą `.card` i dodaj im klasę "processed" oraz ustaw atrybut data-status="done"
