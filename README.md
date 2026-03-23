@@ -977,7 +977,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
   można użyć ``textContent`` w następujący sposób:
 
   ```javascript
-  const myP = document.getElementById("myP");
+  const myP = document.querySelector("#myP");
   myP.textContent = "Hello JavaScript World";
   ```
 
@@ -992,7 +992,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
   można użyć ``textContent`` w następujący sposób, aby uzyskać tekst elementu:
 
   ```javascript
-  const myP = document.getElementById("myP");
+  const myP = document.querySelector("#myP");
   const text = myP.textContent;
   console.log(text); // "Hello JavaScript World"
   ```
@@ -1017,7 +1017,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
 
   ```javascript
   const newParagraph = document.createElement("p");
-  const myDiv = document.getElementById("myDiv");
+  const myDiv = document.querySelector("#myDiv");
   myDiv.appendChild(newParagraph);
   ```
 
