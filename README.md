@@ -1457,11 +1457,11 @@ element.addEventListener("typ_zdarzenia", (event) => {
 ```
 
 Możesz wewnątrz:
-- zmieniać textContent
-- dodawać/usuwać elementy
-- manipulować klasami
-- korzystać z event.target
-- reagować na wpisywany tekst lub zmianę wartości
+> - zmieniać textContent
+> - dodawać/usuwać elementy
+> - manipulować klasami
+> - korzystać z event.target
+> - reagować na wpisywany tekst lub zmianę wartości
 
 
 31. Dodaj eventListener typu `click` do przycisku `#add-item-btn`, który po kliknięciu pobierze wartość z inputa i doda nowy element li do `#dynamic-list`
