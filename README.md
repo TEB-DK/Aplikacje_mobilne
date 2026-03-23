@@ -1456,6 +1456,19 @@ element.addEventListener("typ_zdarzenia", (event) => {
 })
 ```
 
+>[!IMPORTANT]
+> Tabela z możliwymi `typami_zdarzenia` do `addEventListener`
+> | Typ zdarzenia | Opis |
+> |---------------|------|
+> | click         | Wywoływane, gdy użytkownik kliknie element (np. przycisk lub link). |
+> | input         | Uruchamia się za każdym razem, gdy zmienia się wartość pola (np. podczas pisania w input). |
+> | change        | Wywoływane, gdy wartość elementu formularza zostanie zmieniona i zatwierdzona (np. po opuszczeniu pola). |
+> | submit        | Uruchamiane przy wysłaniu formularza. |
+> | mouseover     | Wywoływane, gdy kursor myszy najedzie na element. |
+> | mouseout      | Uruchamiane, gdy kursor myszy opuści element. |
+> | keydown       | Wywoływane w momencie naciśnięcia klawisza na klawiaturze. |
+> | toggle        | Uruchamiane, gdy element (np. `<details>`) zmienia swój stan (otwarty/zamknięty). |
+
 Możesz wewnątrz:
 > - zmieniać textContent
 > - dodawać/usuwać elementy
