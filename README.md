@@ -1504,7 +1504,7 @@ Możesz wewnątrz:
 
 > Zadania realizowane będą na przygotowanej stronie przez prowadzącego pod linkiem poniżej.
 
-[ 🔗 Przenieś mnie do strony testowej!](https://jsfiddle.net/x9e75uvm/1/)
+[ 🔗 Przenieś mnie do strony testowej!](https://jsfiddle.net/rdej9L7u/)
 
 
 1. Pobierz element `header` za pomocą jego ID.
