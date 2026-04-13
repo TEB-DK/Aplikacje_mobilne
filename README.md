@@ -1496,3 +1496,81 @@ Możesz wewnątrz:
 39. Dodaj eventListener typu `mouseover` oraz `mouseout` do wszystkich `.card`, który zmienia ich styl (np. dodaje i usuwa klasę)
 
 40. Dodaj eventListener typu `keydown` do inputa name="name", który wykrywa naciśnięcie klawisza Enter i wypisuje tekst inputa w konsoli
+
+
+---
+
+### 🌟 Zadania do wykonania v3
+
+> Zadania realizowane będą na przygotowanej stronie przez prowadzącego pod linkiem poniżej.
+
+[ 🔗 Przenieś mnie do strony testowej!](https://jsfiddle.net/wdk0cazo/)
+
+
+1. Pobierz element `header` za pomocą jego ID.
+2. Pobierz wszystkie elementy `<li>` znajdujące się w nawigacji.
+3. Znajdź pierwszy przycisk o klasie `.delete-trigger`.
+4. Pobierz wszystkie sekcje (`<section>`) znajdujące się wewnątrz `#content-area`.
+5. Znajdź element z atrybutem `data-secret` używając selektora atrybutu.
+6. Pobierz link "Start" używając jego atrybutu `data-link`.
+7. Znajdź przycisk `#trigger-btn` i przejdź do jego najbliższego przodka o klasie `.level-1`.
+8. Pobierz wszystkie wiersze tabeli (`<tr>`) znajdujące się tylko w `<tbody>`.
+9. Znajdź element `figcaption` idąc od obrazka `#main-image` (rodzeństwo).
+10. Pobierz wszystkie checkboxy z sekcji preferencji.
+11. Znajdź rodzica elementu `#username`.
+12. Pobierz wszystkie dzieci elementu `.notification-wrapper`.
+13. Pobierz tekst nagłówka `h1` bez pobierania całego elementu.
+14. Znajdź ostatni element listy w `#notification-list`.
+15. Wybierz wszystkie elementy, które mają klasę `nest` oraz `level-2` jednocześnie.
+16. Stwórz nowy element `<li>` i dodaj go na koniec listy nawigacyjnej.
+17. Stwórz nowy przycisk "Logowanie" i umieść go w nagłówku obok `nav`.
+18. Dodaj nowy wiersz do tabeli z ID `103` i imieniem "Piotr".
+19. Wstaw nowy paragraf z ostrzeżeniem na samym początku sekcji `#forms-demo`.
+20. Stwórz listę `<ul>` z trzema elementami i wstaw ją do pustego dotąd `#skill-list`.
+21. Sklonuj powiadomienie o "Krytycznym błędzie" i dodaj je na koniec listy powiadomień.
+22. Dodaj element `<span>` z tekstem " (Wymagane)" wewnątrz etykiety (label) dla użytkownika.
+23. Stwórz element `hr` i umieść go między każdą sekcją w `#content-area`.
+24. Używając `insertAdjacentHTML`, dodaj link do polityki prywatności w stopce.
+25. Stwórz ikonę (np. emoji 🚀) i wstaw ją na początek nagłówka `h1`.
+26. Dodaj nową opcję "Administrator" do selecta z rolami.
+27. Stwórz element `style` i wstrzyknij go do `head`, zmieniając kolor `body` na jasnoszary.
+28. Dodaj przycisk "Anuluj" na końcu formularza.
+29. Stwórz div-a z klasą `alert-box` i umieść go nad tabelą.
+30. Wstaw znacznik `<mark>` wokół słowa "szmaragd" w sekcji trawersowania.
+31. Zmień kolor tekstu w nagłówku `h1` na granatowy.
+32. Ustaw `display: block` dla ukrytego elementu `.admin-only`.
+33. Zmień atrybut `src` obrazka `#main-image` na dowolny inny URL.
+34. Dodaj klasę `highlight` do wszystkich elementów `.notification-item`.
+35. Zmień `placeholder` w polu użytkownika na "Podaj imię...".
+36. Odczytaj wartość `data-priority` z pierwszego powiadomienia i wypisz ją w konsoli.
+37. Zmień atrybut `datetime` w znaczniku `<time>` na jutrzejszą datę.
+38. Ustaw pole `#username` jako `disabled`.
+39. Zmień tekst wewnątrz `figcaption` na "Nowy opis obrazka".
+40. Nadaj tabeli obramowanie (border) o szerokości 2px za pomocą JS.
+41. Usuń klasę `nest` z elementu o poziomie 3.
+42. Zmień kolor tła powiadomienia o sukcesie na jasnozielony.
+43. Dodaj atrybut `target="_blank"` do wszystkich linków w nawigacji.
+44. Ustaw wartość (value) selecta roli na "moderator".
+45. Sprawdź, czy przycisk `#trigger-btn` posiada klasę `active` (użyj `contains`).
+46. Usuń pierwsze powiadomienie z listy.
+47. Wyczyść całą zawartość sekcji `#semantic-demo`.
+48. Usuń wiersz tabeli, który zawiera ID `102`.
+49. Usuń wszystkie elementy o klasie `description` z powiadomień.
+50. Usuń cały element `footer` ze strony.
+51. **Click:** Po kliknięciu w `#trigger-btn` wyświetl alert z tekstem z `data-secret`.
+52. **Click (Delegacja):** Po kliknięciu w dowolny `.delete-trigger` usuń jego rodzica `.notification-item`.
+53. **MouseEnter:** Gdy myszka najedzie na `.notification-item`, zmień jego tło na żółte.
+54. **MouseLeave:** Gdy myszka opuści `.notification-item`, przywróć pierwotne tło.
+55. **Input:** Podczas pisania w `#username`, aktualizuj w czasie rzeczywistym tekst nagłówka `h1`.
+56. **Change:** Po zmianie roli w `select`, wyświetl w konsoli nową wybraną wartość.
+57. **Submit:** Zablokuj domyślne wysyłanie formularza `#complex-form` i wypisz w konsoli "Formularz zatrzymany".
+58. **Click:** Przycisk `#clear-all-notifs` powinien usuwać wszystkie elementy z listy powiadomień.
+59. **Click:** Przycisk `#restore-notifs` powinien odświeżyć stronę (użyj `location.reload()`).
+60. **DoubleClick:** Po podwójnym kliknięciu w obrazek, zwiększ jego szerokość dwukrotnie.
+61. **Keydown:** Jeśli użytkownik naciśnie klawisz "Escape", zamknij (ukryj) sekcję powiadomień.
+62. **Focus:** Gdy pole `#username` zyska focus, zmień jego obramowanie na czerwone.
+63. **Blur:** Gdy pole `#username` straci focus, sprawdź czy ma min. 5 znaków – jeśli nie, wyświetl błąd pod polem.
+64. **Click:** Po kliknięciu w linki nawigacji, dodaj klasę `active` do klikniętego elementu i usuń ją z pozostałych.
+65. **Toggle:** Po kliknięciu w przycisk `#add-skill-btn`, dodaj wartość z inputa `#new-skill` do listy `#skill-list`, a następnie wyczyść inputa.
+
+---
