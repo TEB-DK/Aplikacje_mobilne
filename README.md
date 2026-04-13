@@ -1530,7 +1530,7 @@ Możesz wewnątrz:
 21. Sklonuj powiadomienie o "Krytycznym błędzie" i dodaj je na koniec listy powiadomień.
 22. Dodaj element `<span>` z tekstem " (Wymagane)" wewnątrz etykiety (label) dla użytkownika.
 23. Stwórz element `hr` i umieść go między każdą sekcją w `#content-area`.
-24. Używając `insertAdjacentHTML`, dodaj link do polityki prywatności w stopce.
+24. Używając `innerHTML`, dodaj link do polityki prywatności w stopce.
 25. Stwórz ikonę (np. emoji 🚀) i wstaw ją na początek nagłówka `h1`.
 26. Dodaj nową opcję "Administrator" do selecta z rolami.
 27. Stwórz element `style` i wstrzyknij go do `head`, zmieniając kolor `body` na jasnoszary.
@@ -1557,20 +1557,25 @@ Możesz wewnątrz:
 48. Usuń wiersz tabeli, który zawiera ID `102`.
 49. Usuń wszystkie elementy o klasie `description` z powiadomień.
 50. Usuń cały element `footer` ze strony.
-51. **Click:** Po kliknięciu w `#trigger-btn` wyświetl alert z tekstem z `data-secret`.
-52. **Click (Delegacja):** Po kliknięciu w dowolny `.delete-trigger` usuń jego rodzica `.notification-item`.
-53. **MouseEnter:** Gdy myszka najedzie na `.notification-item`, zmień jego tło na żółte.
-54. **MouseLeave:** Gdy myszka opuści `.notification-item`, przywróć pierwotne tło.
-55. **Input:** Podczas pisania w `#username`, aktualizuj w czasie rzeczywistym tekst nagłówka `h1`.
-56. **Change:** Po zmianie roli w `select`, wyświetl w konsoli nową wybraną wartość.
-57. **Submit:** Zablokuj domyślne wysyłanie formularza `#complex-form` i wypisz w konsoli "Formularz zatrzymany".
-58. **Click:** Przycisk `#clear-all-notifs` powinien usuwać wszystkie elementy z listy powiadomień.
-59. **Click:** Przycisk `#restore-notifs` powinien odświeżyć stronę (użyj `location.reload()`).
-60. **DoubleClick:** Po podwójnym kliknięciu w obrazek, zwiększ jego szerokość dwukrotnie.
-61. **Keydown:** Jeśli użytkownik naciśnie klawisz "Escape", zamknij (ukryj) sekcję powiadomień.
-62. **Focus:** Gdy pole `#username` zyska focus, zmień jego obramowanie na czerwone.
-63. **Blur:** Gdy pole `#username` straci focus, sprawdź czy ma min. 5 znaków – jeśli nie, wyświetl błąd pod polem.
-64. **Click:** Po kliknięciu w linki nawigacji, dodaj klasę `active` do klikniętego elementu i usuń ją z pozostałych.
-65. **Toggle:** Po kliknięciu w przycisk `#add-skill-btn`, dodaj wartość z inputa `#new-skill` do listy `#skill-list`, a następnie wyczyść inputa.
+
+---
+
+### AddEventListenery
+    
+52. **Click:** Po kliknięciu w `#trigger-btn` wyświetl alert z tekstem z `data-secret`.
+53. **Click (Delegacja):** Po kliknięciu w dowolny `.delete-trigger` usuń jego rodzica `.notification-item`.
+54. **MouseEnter:** Gdy myszka najedzie na `.notification-item`, zmień jego tło na żółte.
+55. **MouseLeave:** Gdy myszka opuści `.notification-item`, przywróć pierwotne tło.
+56. **Input:** Podczas pisania w `#username`, aktualizuj w czasie rzeczywistym tekst nagłówka `h1`.
+57. **Change:** Po zmianie roli w `select`, wyświetl w konsoli nową wybraną wartość.
+58. **Submit:** Zablokuj domyślne wysyłanie formularza `#complex-form` i wypisz w konsoli "Formularz zatrzymany".
+59. **Click:** Przycisk `#clear-all-notifs` powinien usuwać wszystkie elementy z listy powiadomień.
+60. **Click:** Przycisk `#restore-notifs` powinien odświeżyć stronę (użyj `location.reload()`).
+61. **DoubleClick:** Po podwójnym kliknięciu w obrazek, zwiększ jego szerokość dwukrotnie.
+62. **Keydown:** Jeśli użytkownik naciśnie klawisz "Escape", zamknij (ukryj) sekcję powiadomień.
+63. **Focus:** Gdy pole `#username` zyska focus, zmień jego obramowanie na czerwone.
+64. **Blur:** Gdy pole `#username` straci focus, sprawdź czy ma min. 5 znaków – jeśli nie, wyświetl błąd pod polem.
+65. **Click:** Po kliknięciu w linki nawigacji, dodaj klasę `active` do klikniętego elementu i usuń ją z pozostałych.
+66. **Toggle:** Po kliknięciu w przycisk `#add-skill-btn`, dodaj wartość z inputa `#new-skill` do listy `#skill-list`, a następnie wyczyść inputa.
 
 ---
