@@ -1526,7 +1526,7 @@ Możesz wewnątrz:
 17. Stwórz nowy przycisk "Logowanie" i umieść go w nagłówku obok `nav`.
 18. Dodaj nowy wiersz do tabeli z ID `103` i imieniem "Piotr".
 19. Wstaw nowy paragraf z ostrzeżeniem na samym początku sekcji `#forms-demo`.
-20. Stwórz listę `<ul>` z trzema elementami i wstaw ją do pustego dotąd `#skill-list`.
+20. Utwórz trzy elementy listy `ul` i wstaw je do pustego dotąd `#skill-list`.
 21. Sklonuj powiadomienie o "Krytycznym błędzie" i dodaj je na koniec listy powiadomień.
 22. Dodaj element `<span>` z tekstem " (Wymagane)" wewnątrz etykiety (label) dla użytkownika.
 23. Stwórz element `hr` i umieść go między każdą sekcją w `#content-area`.
