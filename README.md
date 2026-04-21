@@ -931,7 +931,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
   > Przykładowe zastosowanie właściwości ``parentElement`` to:
 
   ```javascript
-  const child = document.getElementById("myChildElement");
+  const child = document.querySelector("#myChildElement");
   const parent = child.parentElement;
   parent.style.border = "1px solid black";
   ```
@@ -949,7 +949,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
   ``<div id="myDiv">Hello World</div>`` można użyć ``innerHTML`` w następujący sposób:
 
   ```javascript
-  const myDiv = document.getElementById("myDiv");
+  const myDiv = document.querySelector("#myDiv");
   myDiv.innerHTML = "Hello <b>JavaScript</b> World";
   ```
 
@@ -1028,7 +1028,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
   Metoda ``removeChild()`` służy do usuwania elementów z drzewa DOM. Metoda ta przyjmuje ``jeden argument - element``, który ma zostać usunięty z drzewa DOM. Na przykład, aby usunąć element ``<p>`` z elementu ``<div>``, można użyć:
 
   ```javascript
-  const myDiv = document.getElementById("myDiv");
+  const myDiv = document.querySelector("#myDiv");
   const paragraphToRemove = myDiv.querySelector("p");
   myDiv.removeChild(paragraphToRemove);
   ```
@@ -1058,7 +1058,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
   Na przykład, aby zmienić wartość atrybutu class dla elementu ``<p>``, można użyć:
 
   ```javascript
-  const myParagraph = document.getElementById("my-paragraph");
+  const myParagraph = document.querySelector("#my-paragraph");
   myParagraph.setAttribute("class", "new-class");
   ```
 
@@ -1071,7 +1071,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
   Na przykład, aby pobrać wartość atrybutu class dla elementu ``<p>``, można użyć:
 
   ```javascript
-  const myParagraph = document.getElementById("my-paragraph");
+  const myParagraph = document.querySelector("#my-paragraph");
   const paragraphClass = myParagraph.getAttribute("class");
   ```
   W powyższym przykładzie, został pobrany element ``<p>`` o identyfikatorze ``my-paragraph``, a następnie została pobrana wartość atrybutu class. Wartość ta zostanie zapisana w zmiennej ``paragraphClass``.
@@ -1089,7 +1089,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
 
   ```javascript
   // Przykładowy element HTML z identyfikatorem "my-input"
-  const myInput = document.getElementById("my-input");
+  const myInput = document.querySelector("#my-input");
 
   // Dodanie funkcji obsługującej zmianę wartości pola tekstowego
   myInput.addEventListener("input", () => {
@@ -1105,7 +1105,7 @@ Manipulacja elementami DOM w JavaScript jest kluczowym aspektem tworzenia intera
 
   ```javascript
   // Przykładowy element HTML z identyfikatorem "my-button"
-  const myButton = document.getElementById("my-button");
+  const myButton = document.querySelector("#my-button");
 
   // Definicja funkcji obsługującej kliknięcie przycisku
   const handleClick = () => {
