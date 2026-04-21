@@ -1528,35 +1528,40 @@ Możesz wewnątrz:
 19. Wstaw nowy paragraf z ostrzeżeniem na samym początku sekcji `#forms-demo`.
 20. Utwórz trzy elementy listy `ul` i wstaw je do pustego dotąd `#skill-list`.
 21. Sklonuj powiadomienie o "Krytycznym błędzie" i dodaj je na koniec listy powiadomień.
-22. Dodaj element `<span>` z tekstem " (Wymagane)" wewnątrz etykiety (label) dla użytkownika.
-23. Stwórz element `hr` i umieść go między każdą sekcją w `#content-area`.
-24. Używając `innerHTML`, dodaj link do polityki prywatności w stopce.
-25. Stwórz ikonę (np. emoji 🚀) i wstaw ją na początek nagłówka `h1`.
-26. Dodaj nową opcję "Administrator" do selecta z rolami.
-27. Stwórz element `style` i wstrzyknij go do `head`, zmieniając kolor `body` na jasnoszary.
-28. Dodaj przycisk "Anuluj" na końcu formularza.
-29. Stwórz div-a z klasą `alert-box` i umieść go nad tabelą.
-30. Wstaw znacznik `<mark>` wokół słowa "szmaragd" w sekcji trawersowania.
-31. Zmień kolor tekstu w nagłówku `h1` na granatowy.
-32. Ustaw `display: block` dla ukrytego elementu `.admin-only`.
-33. Zmień atrybut `src` obrazka `#main-image` na dowolny inny URL.
-34. Dodaj klasę `highlight` do wszystkich elementów `.notification-item`.
-35. Zmień `placeholder` w polu użytkownika na "Podaj imię...".
-36. Odczytaj wartość `data-priority` z pierwszego powiadomienia i wypisz ją w konsoli.
-37. Zmień atrybut `datetime` w znaczniku `<time>` na jutrzejszą datę.
-38. Ustaw pole `#username` jako `disabled`.
-39. Zmień tekst wewnątrz `figcaption` na "Nowy opis obrazka".
-40. Nadaj tabeli obramowanie (border) o szerokości 2px za pomocą JS.
-41. Usuń klasę `nest` z elementu o poziomie 3.
-42. Zmień kolor tła powiadomienia o sukcesie na jasnozielony.
-43. Dodaj atrybut `target="_blank"` do wszystkich linków w nawigacji.
-44. Ustaw wartość (value) selecta roli na "moderator".
-45. Sprawdź, czy przycisk `#trigger-btn` posiada klasę `active` (użyj `contains`).
-46. Usuń pierwsze powiadomienie z listy.
-47. Wyczyść całą zawartość sekcji `#semantic-demo`.
-48. Usuń wiersz tabeli, który zawiera ID `102`.
-49. Usuń wszystkie elementy o klasie `description` z powiadomień.
-50. Usuń cały element `footer` ze strony.
+    - ```javascript
+      // Wykorzystanie clodeNode do sklonowania elementu p ze strony z zawartością.
+      const p = document.querySelector("p");
+      const p2 = p.cloneNode(true);
+      ```
+23. Dodaj element `<span>` z tekstem " (Wymagane)" wewnątrz etykiety (label) dla użytkownika.
+24. Stwórz element `hr` i umieść go między każdą sekcją w `#content-area`.
+25. Używając `innerHTML`, dodaj link do polityki prywatności w stopce.
+26. Stwórz ikonę (np. emoji 🚀) i wstaw ją na początek nagłówka `h1`.
+27. Dodaj nową opcję "Administrator" do selecta z rolami.
+28. Stwórz element `style` i wstrzyknij go do `head`, zmieniając kolor `body` na jasnoszary.
+29. Dodaj przycisk "Anuluj" na końcu formularza.
+30. Stwórz div-a z klasą `alert-box` i umieść go nad tabelą.
+31. Wstaw znacznik `<mark>` wokół słowa "szmaragd" w sekcji trawersowania.
+32. Zmień kolor tekstu w nagłówku `h1` na granatowy.
+33. Ustaw `display: block` dla ukrytego elementu `.admin-only`.
+34. Zmień atrybut `src` obrazka `#main-image` na dowolny inny URL.
+35. Dodaj klasę `highlight` do wszystkich elementów `.notification-item`.
+36. Zmień `placeholder` w polu użytkownika na "Podaj imię...".
+37. Odczytaj wartość `data-priority` z pierwszego powiadomienia i wypisz ją w konsoli.
+38. Zmień atrybut `datetime` w znaczniku `<time>` na jutrzejszą datę.
+39. Ustaw pole `#username` jako `disabled`.
+40. Zmień tekst wewnątrz `figcaption` na "Nowy opis obrazka".
+41. Nadaj tabeli obramowanie (border) o szerokości 2px za pomocą JS.
+42. Usuń klasę `nest` z elementu o poziomie 3.
+43. Zmień kolor tła powiadomienia o sukcesie na jasnozielony.
+44. Dodaj atrybut `target="_blank"` do wszystkich linków w nawigacji.
+45. Ustaw wartość (value) selecta roli na "moderator".
+46. Sprawdź, czy przycisk `#trigger-btn` posiada klasę `active` (użyj `contains`).
+47. Usuń pierwsze powiadomienie z listy.
+48. Wyczyść całą zawartość sekcji `#semantic-demo`.
+49. Usuń wiersz tabeli, który zawiera ID `102`.
+50. Usuń wszystkie elementy o klasie `description` z powiadomień.
+51. Usuń cały element `footer` ze strony.
 
 ---
 
